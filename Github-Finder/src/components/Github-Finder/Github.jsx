@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import User from './User'
+import User from '../Github-Finder/User'
 const Github = () => {
     const [userName,setUserName]=useState('')
     const[userData,setUserData]=useState(null)
@@ -30,10 +30,10 @@ const Github = () => {
     //     return <h1>Loading........</h1>
     // }
   return (
-    <div className='max-h-full bg-gray-800 flex flex-col justify-center items-center gap-3'> 
+    <div className='min-h-full bg-gray-800 flex flex-col justify-center items-center gap-3'> 
         <h1 className=' flex items-center justify-center  bg-black w-1/3 rounded-md text-white font-bold text-2xl'>Github Profile Finder</h1>
         <div className='flex justify-center items-center gap-3'>
-            <input className='outline w-xl p-[23px] rounded-md' type="text" placeholder='Search Github Username' name='search-by-username' value={userName} onChange={(event)=>setUserName(event.target.value)} />
+            <input className='outline w-xl p-2 rounded-md' type="text" placeholder='Search Github Username' name='search-by-username' value={userName} onChange={(event)=>setUserName(event.target.value)} />
             <button className='bg-green-900 ' onClick={handleSubmit}>Search</button>
         </div>
         <div>
